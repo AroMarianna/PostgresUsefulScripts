@@ -1,0 +1,10 @@
+/**wraparound , vacuum , dead tuples , transaction*/
+
+--current tran
+
+select * from txid_current();
+
+-- how far we from 2 billions limit of postgres
+
+SELECT datname, age(datfrozenxid) FROM pg_database ORDER BY 2 ;
+
